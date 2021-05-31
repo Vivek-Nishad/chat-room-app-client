@@ -8,7 +8,6 @@ import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
 // import RoomData from "../RoomData/RoomData";
 
-const ENDPOINT = "https://chat-room-app-vk.herokuapp.com/";
 // const ENDPOINT = "localhost:5000";
 
 let socket;
@@ -19,6 +18,7 @@ function Chat({ location }) {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [userRoomData, setUserRoomData] = useState("");
+  const ENDPOINT = "https://chat-room-app-vk.herokuapp.com/";
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
