@@ -1,0 +1,116 @@
+:root {
+  --bg: #f0f0f3;
+  --bs-p: #ffffff;
+  --bs-s: #aeaec0;
+  --bs-sa25: #aeaec040;
+  --bs-sa40: #aeaec066;
+  --tc: rgb(23, 23, 23);
+}
+
+#root {
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.joinOuterContainer {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.joinInnerContainer {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  border-radius: 5%;
+  box-shadow: -10px -10px 20px 0px var(--bs-p),
+    10px 10px 20px 0px var(--bs-sa40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.joinInnerContainer > .heading {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 80px 0px 40px 0px;
+  border-bottom: 4px solid black;
+}
+
+.joinInnerContainer > div {
+  margin: 30px 0;
+  background: var(--bg);
+  width: 70%;
+  height: 8%;
+  border-radius: 25px;
+
+  box-shadow: -5px -5px 10px 2px var(--bs-p), 5px 5px 10px 2px var(--bs-sa40);
+}
+
+.joinInput:hover,
+.joinInput:active,
+.joinInput:focus,
+.joinBtn:hover,
+.joinBtn:active,
+.joinBtn:focus {
+  transform: scale(1.2);
+}
+
+.joinInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  border-radius: 25px;
+}
+
+.joinInnerContainer a {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.joinInnerContainer .joinBtn {
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  outline: none;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .joinInnerContainer {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .joinInnerContainer {
+    width: 60%;
+    height: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .joinInnerContainer {
+    width: 600px;
+    height: 80%;
+  }
+}

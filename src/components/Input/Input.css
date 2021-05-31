@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  height: 50px;
+}
+
+.input {
+  height: 100%;
+  width: 85%;
+  background: transparent;
+  border: none;
+  padding-left: 30px;
+  margin-right: 10px;
+  outline: none;
+  box-shadow: -2px -2px 5px 0px var(--bs-p), 2px 2px 5px 0px var(--bs-s);
+  border-radius: 10px;
+}
+
+.sendButton {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 15%;
+  background: transparent;
+  /* background: red; */
+  box-shadow: -2px -2px 5px 0px var(--bs-p), 2px 2px 5px 0px var(--bs-s);
+}
+
+.sendButton i {
+  border: none;
+  font-size: 1.8em;
+  color: var(--tc);
+}
+
+.input:hover,
+.input:active,
+.input:focus {
+  box-shadow: -10px -10px 20px 0px var(--bs-p), 10px 10px 20px 0px var(--bs-s);
+}
+
+.sendButton:hover,
+.sendButton:active,
+.sendButton:focus {
+  font-size: 1rem;
+
+  box-shadow: -10px -10px 20px 0px var(--bs-p), 10px 10px 20px 0px var(--bs-s);
+}

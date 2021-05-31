@@ -1,0 +1,56 @@
+.infoBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.leftInnerContainer {
+  height: 100%;
+  width: 85%;
+  font-size: 1.5rem;
+  color: var(--tc);
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: -2px -2px 5px 0px var(--bs-p), 2px 2px 5px 0px var(--bs-s);
+}
+
+.rightInnerContainer {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  box-shadow: -2px -2px 5px 0px var(--bs-p), 2px 2px 5px 0px var(--bs-s);
+}
+
+.rightInnerContainer a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.rightInnerContainer i {
+  text-decoration: none;
+  outline: none;
+  font-size: 1.5em;
+  color: var(--tc);
+}
+
+.rightInnerContainer:hover,
+.rightInnerContainer:active,
+.rightInnerContainer:focus {
+  font-size: 1.1rem;
+  box-shadow: -10px -10px 20px 0px var(--bs-p), 10px 10px 20px 0px var(--bs-s);
+}
