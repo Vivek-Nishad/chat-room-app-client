@@ -8,7 +8,8 @@ import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
 // import RoomData from "../RoomData/RoomData";
 
-const ENDPOINT = "localhost:5000";
+const ENDPOINT = "https://chat-room-app-vk.herokuapp.com/";
+// const ENDPOINT = "localhost:5000";
 
 let socket;
 
