@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Join.css";
 
-function Join() {
+function Join({ sameNameErrMsg }) {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
@@ -19,6 +19,7 @@ function Join() {
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
             />
+            {sameNameErrMsg ? <p className="errMsg">{sameNameErrMsg}</p> : null}
           </div>
           <div>
             <input

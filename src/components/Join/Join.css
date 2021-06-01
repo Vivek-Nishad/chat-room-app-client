@@ -116,3 +116,9 @@
     height: 80vh;
   }
 }
+
+.errMsg {
+  color: red;
+  width: 100%;
+  text-align: center;
+}

@@ -6,7 +6,7 @@ import "./Chat.css";
 import InfoBar from "../InfoBar/InfoBar";
 import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
-// import RoomData from "../RoomData/RoomData";
+import Join from "../Join/Join";
 
 // const ENDPOINT = "localhost:5000";
 
@@ -20,6 +20,9 @@ function Chat({ location }) {
   const [userRoomData, setUserRoomData] = useState("");
   const ENDPOINT = "https://chat-room-app-vk.herokuapp.com/";
 
+  const [sameNameErr, setSameNameErr] = useState(false);
+  const [sameNameErrMsg, setSameNameErrMsg] = useState("");
+
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
@@ -30,8 +33,9 @@ function Chat({ location }) {
 
     socket.emit("join", { name, room }, (err) => {
       if (err) {
-        alert(err);
-        // do something here
+        // alert(err);
+        setSameNameErr(true);
+        setSameNameErrMsg(err);
       }
     });
 
@@ -65,24 +69,22 @@ function Chat({ location }) {
     }
   };
 
-  // console.log("msg" + message, "msgs" + messages);
   // console.log(message, messages);
-  // console.log(messages);
 
-  return (
+  return sameNameErr ? (
+    <>
+      <Join sameNameErrMsg={sameNameErrMsg} />
+    </>
+  ) : (
     <div className="outerContainer">
       <div className="container">
-        {/* <InfoBar room={room} /> */}
-
         <InfoBar room={room} userRoomData={userRoomData} />
-
         <Messages messages={messages} name={name} />
         <Input
           message={message}
           setMessage={setMessage}
           sendMessage={sendMessage}
         />
-        {/* <RoomData userRoomData={userRoomData} /> */}
       </div>
     </div>
   );
