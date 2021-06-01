@@ -13,7 +13,7 @@
   color: var(--tc);
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 
   margin-right: 10px;
   border-radius: 10px;
@@ -53,4 +53,22 @@
 .rightInnerContainer:focus {
   font-size: 1.1rem;
   box-shadow: -10px -10px 20px 0px var(--bs-p), 10px 10px 20px 0px var(--bs-s);
+}
+
+.leftInnerContainer:hover,
+.leftInnerContainer:active,
+.leftInnerContainer:focus {
+  font-size: 1.6em;
+  box-shadow: -10px -10px 20px 0px var(--bs-p), 10px 10px 20px 0px var(--bs-s);
+}
+
+.leftInnerContainer > div {
+  width: 100%;
+}
+
+.leftInnerContainer > div > h3 {
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+  word-wrap: break-word;
 }

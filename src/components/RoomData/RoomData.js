@@ -12,14 +12,16 @@ const RoomData = ({ userRoomData: { room, users } }) => {
     <div>
       <h3 onClick={onOpenModal}>{room}</h3>
       <Modal open={open} onClose={onCloseModal} center>
-        <h2>
+        <h3>
           <div>Users currently in {room} :</div>
+        </h3>
+        <h5>
           <div className="users ">
             {users
               ? users.map((user) => <p key={user.id}>{user.name}</p>)
               : null}
           </div>
-        </h2>
+        </h5>
       </Modal>
     </div>
   );
